@@ -1,0 +1,600 @@
+1
+00:00:00,050 --> 00:00:03,700
+Source Watch 4 turns YouTube into your research workspace.
+
+2
+00:00:03,700 --> 00:00:14,700
+In a few clicks, prepare the transcript and a detailed prompt for ChatGPT
+to assess the source's credibility and reliability, examine its evidence,
+and fact-check its claims.
+
+3
+00:00:14,700 --> 00:00:17,112
+Your working library stays on your computer.
+
+4
+00:00:17,234 --> 00:00:20,934
+Open the supplied executable and follow the instructions.
+
+5
+00:00:21,184 --> 00:00:24,921
+When Source Watch opens, your first step is to connect YouTube.
+
+6
+00:00:25,234 --> 00:00:29,446
+On a fresh first launch, the welcome guide opens automatically.
+
+7
+00:00:29,484 --> 00:00:32,659
+Choose Start setup to reach Setup and Preferences.
+
+8
+00:00:33,684 --> 00:00:37,197
+Choose Connect YouTube to open Google's sign-in process.
+
+9
+00:00:38,684 --> 00:00:45,546
+We connect first so Source Watch can load the subscriptions and playlists
+belonging to the account you actually want to use.
+
+10
+00:00:45,546 --> 00:00:46,996
+You sign in with Google.
+
+11
+00:00:46,996 --> 00:00:50,084
+You do not enter your Google password into Source Watch.
+
+12
+00:00:50,201 --> 00:00:54,751
+First, choose the Google account you use for the YouTube subscriptions you
+want here.
+
+13
+00:00:54,751 --> 00:00:59,076
+If Google asks you to sign in, complete that step on Google's own page.
+
+14
+00:00:59,084 --> 00:01:04,659
+The account chooser may also ask you to choose between your personal
+account and a YouTube brand account.
+
+15
+00:01:04,659 --> 00:01:08,309
+Choose the identity containing the subscriptions you want to use.
+
+16
+00:01:08,884 --> 00:01:13,909
+For this private test build, you may see a message that Google has not
+verified the app.
+
+17
+00:01:13,909 --> 00:01:18,471
+That means this build has not completed Google's public verification
+process.
+
+18
+00:01:18,484 --> 00:01:22,972
+Continue only if you are an invited tester using the expected Source Watch
+build.
+
+19
+00:01:22,972 --> 00:01:27,322
+If the application or request is unfamiliar, go back to safety.
+
+20
+00:01:31,484 --> 00:01:35,596
+On the access screen, review the application name and the permissions.
+
+21
+00:01:35,596 --> 00:01:40,709
+The current Source Watch connection requests both viewing and management
+access to YouTube.
+
+22
+00:01:40,884 --> 00:01:48,084
+On a first connection, if Google presents permission checkboxes, select the
+requested permissions before choosing Continue.
+
+23
+00:01:48,084 --> 00:01:53,409
+This account has connected before, so Google shows an existing-access
+summary instead.
+
+24
+00:01:53,484 --> 00:01:58,596
+Open the four services to inspect those permissions, choose Done, then
+Continue.
+
+25
+00:01:59,484 --> 00:02:03,684
+Viewing access lets Source Watch read your subscriptions and playlists.
+
+26
+00:02:04,484 --> 00:02:11,784
+Management access allows supported actions such as updating a playlist or
+unsubscribing when you explicitly request them.
+
+27
+00:02:11,884 --> 00:02:19,209
+Google grants a broad capability here; Source Watch's confirmation controls
+govern when the application uses it.
+
+28
+00:02:19,209 --> 00:02:21,134
+It is not a read-only connection.
+
+29
+00:02:21,284 --> 00:02:23,909
+After approval, return to Source Watch.
+
+30
+00:02:29,617 --> 00:02:32,892
+Check the connected account and let your subscriptions load.
+
+31
+00:02:32,892 --> 00:02:35,542
+A large subscription list can take a little time.
+
+32
+00:02:38,067 --> 00:02:43,467
+Once the subscriptions have loaded, decide how much of your YouTube library
+you want in Source Watch.
+
+33
+00:02:43,517 --> 00:02:48,242
+You can bring in all of your subscribed channels and start with the
+proposed categories.
+
+34
+00:02:48,242 --> 00:02:52,304
+You can keep those suggested categories for a smaller selection of
+channels.
+
+35
+00:02:52,304 --> 00:02:58,917
+Or you can choose channels individually and change or create categories to
+organize the dashboard your own way.
+
+36
+00:02:59,017 --> 00:03:02,292
+For a large library, work in manageable pages.
+
+37
+00:03:02,292 --> 00:03:06,229
+Select visible selects the eligible channels currently displayed.
+
+38
+00:03:06,229 --> 00:03:13,567
+Check the count and categories, add the selected channels, then continue
+through the remaining pages if you want your whole library.
+
+39
+00:03:14,517 --> 00:03:18,117
+For a more focused start, select only the channels you want.
+
+40
+00:03:18,517 --> 00:03:24,017
+The proposed categories are a starting point: keep them, remove them, or
+add your own.
+
+41
+00:03:24,017 --> 00:03:27,267
+Each selected channel needs a category before import.
+
+42
+00:03:27,284 --> 00:03:28,871
+Then confirm the import.
+
+43
+00:03:31,284 --> 00:03:37,747
+Your approved channels become monitored sources, and their categories shape
+how you browse and filter your dashboard.
+
+44
+00:03:37,747 --> 00:03:41,959
+You can refine that organization later in Sources and Categories.
+
+45
+00:03:42,134 --> 00:03:46,721
+Refresh the feed to retrieve recent public uploads from your monitored
+sources.
+
+46
+00:03:46,721 --> 00:03:49,771
+Latest Long-form keeps longer videos together.
+
+47
+00:03:49,884 --> 00:03:51,322
+Shorts have their own view.
+
+48
+00:03:53,884 --> 00:04:00,696
+Narrow the feed by category, channel, status, or search text to find
+material that matters to your question.
+
+49
+00:04:03,884 --> 00:04:08,497
+The source score and rough priority are attention aids, not truth ratings.
+
+50
+00:04:08,497 --> 00:04:12,447
+Let's choose one video and move directly into understanding it.
+
+51
+00:04:12,734 --> 00:04:15,534
+Open Quick Brief for a fast first inspection.
+
+52
+00:04:16,184 --> 00:04:22,859
+It extracts likely main points from the available material and flags simple
+signals that may deserve attention.
+
+53
+00:04:22,984 --> 00:04:28,434
+Check its basis: a transcript gives it more to work with than a title and
+description alone.
+
+54
+00:04:28,484 --> 00:04:33,109
+Quick Brief is an extractive brief, not a generative AI verdict.
+
+55
+00:04:33,109 --> 00:04:35,534
+It helps you decide what to examine next.
+
+56
+00:04:35,734 --> 00:04:38,696
+Here is one of Source Watch's most useful features.
+
+57
+00:04:38,717 --> 00:04:41,817
+From the video, choose Send to Analysis Desk.
+
+58
+00:04:41,817 --> 00:04:44,880
+You do not have to save it or build a selection first.
+
+59
+00:04:46,817 --> 00:04:51,329
+The desk brings its available transcript and analysis controls together.
+
+60
+00:04:51,417 --> 00:04:58,780
+Choose Copy Deep plus Transcript to copy the source material and a
+structured critical-analysis prompt in one step.
+
+61
+00:04:58,817 --> 00:05:08,367
+The prompt asks for more than a summary: reconstruct the argument, examine
+the evidence, challenge weak points, and identify what needs verification.
+
+62
+00:05:08,417 --> 00:05:12,454
+You can also choose a simpler prompt, or copy the transcript separately.
+
+63
+00:05:12,517 --> 00:05:16,867
+Review the prepared text and adapt the question to what you need to
+understand.
+
+64
+00:05:16,917 --> 00:05:24,117
+If the available captions are unsuitable, V4 also provides caption-language
+selection and manual transcript entry.
+
+65
+00:05:24,217 --> 00:05:26,405
+Then click Open ChatGPT.
+
+66
+00:05:27,917 --> 00:05:31,129
+It opens the ChatGPT website in your browser.
+
+67
+00:05:31,129 --> 00:05:38,092
+If you are already signed in to ChatGPT in that browser, you can use that
+signed-in account; otherwise, sign in there.
+
+68
+00:05:38,201 --> 00:05:43,976
+On the ChatGPT page you just opened, paste the prepared material, review
+it, and send it.
+
+69
+00:05:56,151 --> 00:05:59,713
+Now we can ask: what is the video's strongest argument?
+
+70
+00:05:59,713 --> 00:06:01,151
+What evidence supports it?
+
+71
+00:06:01,151 --> 00:06:05,351
+Where does it rely on assumptions, rhetoric, or missing context?
+
+72
+00:06:05,351 --> 00:06:07,626
+Which claims should we check before trusting them?
+
+73
+00:06:08,151 --> 00:06:10,988
+Read the actual response alongside the source.
+
+74
+00:06:12,551 --> 00:06:18,851
+Follow up with questions, ask for a counterargument, or identify what
+evidence would change the conclusion.
+
+75
+00:06:24,051 --> 00:06:29,789
+Source Watch prepares the material; ChatGPT performs the analysis after you
+submit it.
+
+76
+00:06:29,789 --> 00:06:32,889
+Neither the prompt nor the answer guarantees truth.
+
+77
+00:06:32,889 --> 00:06:38,339
+The benefit is a clearer, deeper investigation—not an automatic stamp of
+approval.
+
+78
+00:06:38,501 --> 00:06:40,101
+Now keep what proved useful.
+
+79
+00:06:40,101 --> 00:06:45,263
+Save marks a video locally, and Saved and Folders gives your retained
+material a home.
+
+80
+00:06:45,751 --> 00:06:50,314
+To work with several videos, click the selection box on each video you
+want.
+
+81
+00:06:55,751 --> 00:06:59,888
+Watch the selected count increase, then open Selected Videos.
+
+82
+00:07:00,451 --> 00:07:06,626
+Choose a folder for the group, apply a batch action, or send the selected
+videos to the Analysis Desk.
+
+83
+00:07:16,451 --> 00:07:19,926
+These local actions are separate from YouTube playlist changes.
+
+84
+00:07:20,651 --> 00:07:25,801
+When you choose a YouTube action, check its destination and confirmation
+before applying it.
+
+85
+00:07:25,934 --> 00:07:28,134
+You can also keep the analysis itself.
+
+86
+00:07:28,134 --> 00:07:34,184
+Copy the useful result from ChatGPT back into Source Watch's Save analysis
+result form.
+
+87
+00:07:36,284 --> 00:07:39,546
+Add verification sources and dates, then save it.
+
+88
+00:07:42,284 --> 00:07:46,372
+Save the investigation as a named workspace in Saved research.
+
+89
+00:07:49,284 --> 00:07:54,871
+Keep the research question, conclusions, source videos and verification
+notes together.
+
+90
+00:07:58,784 --> 00:08:02,109
+You can reopen the record or export it as Markdown.
+
+91
+00:08:02,784 --> 00:08:08,672
+Search My Research helps you find material again across saved transcripts,
+notes and results.
+
+92
+00:08:12,784 --> 00:08:14,871
+This return step is manual.
+
+93
+00:08:14,871 --> 00:08:19,521
+Source Watch does not automatically retrieve your ChatGPT conversations.
+
+94
+00:08:19,634 --> 00:08:22,646
+Discovery takes the question beyond one source.
+
+95
+00:08:22,684 --> 00:08:26,159
+Choose More evidence, Challenge this, or Better source.
+
+96
+00:08:26,684 --> 00:08:32,922
+Search the latest monitored feed, monitored history, or wider YouTube,
+depending on the scope you need.
+
+97
+00:08:33,684 --> 00:08:37,946
+Narrow the results and inspect the reasons and risks shown on the cards.
+
+98
+00:08:37,946 --> 00:08:42,709
+These estimates guide your next search; they do not establish whether a
+claim is true.
+
+99
+00:08:42,784 --> 00:08:46,421
+Bring a promising result into the same analysis workflow.
+
+100
+00:08:46,534 --> 00:08:49,271
+You are not limited to the sources you already know.
+
+101
+00:08:49,271 --> 00:08:54,796
+Trending lets you choose a country and see YouTube's current most-popular
+videos for that region.
+
+102
+00:08:54,984 --> 00:09:00,547
+Narrow the list by a YouTube category, such as News and Politics or Science
+and Technology.
+
+103
+00:09:02,684 --> 00:09:05,459
+Switch countries to see how the results differ.
+
+104
+00:09:08,684 --> 00:09:12,096
+Explore by Country goes beyond the popularity chart.
+
+105
+00:09:13,184 --> 00:09:19,259
+Choose a country and topics such as economy, politics, technology, energy,
+or culture.
+
+106
+00:09:21,684 --> 00:09:29,372
+Adjust the language, recency and search depth to find videos, channels and
+regional perspectives you might otherwise miss.
+
+107
+00:09:34,584 --> 00:09:39,159
+This can help you investigate issues receiving attention in and around a
+country.
+
+108
+00:09:39,184 --> 00:09:48,509
+It is not a complete picture of what its population considers important:
+popular videos are one signal, and country-based search can include outside
+perspectives.
+
+109
+00:09:48,584 --> 00:09:53,159
+Take an interesting result straight into Quick Brief or the Analysis Desk.
+
+110
+00:09:53,634 --> 00:09:56,371
+Open Channel View and choose a monitored channel.
+
+111
+00:09:59,584 --> 00:10:03,697
+Scroll through its videos to explore beyond the newest uploads.
+
+112
+00:10:05,084 --> 00:10:08,546
+Enter a phrase in Search channel videos and run the search.
+
+113
+00:10:13,084 --> 00:10:18,722
+The list narrows to matching material; date and duration filters can refine
+it further.
+
+114
+00:10:18,722 --> 00:10:20,509
+Check the archive's coverage.
+
+115
+00:10:20,509 --> 00:10:24,784
+An empty or partial index is not the entire history of a channel.
+
+116
+00:10:24,884 --> 00:10:31,522
+Where access is available, retrieve additional uploads and return to the
+locally indexed material later.
+
+117
+00:10:31,834 --> 00:10:34,721
+Choose a light or dark color scheme that suits you.
+
+118
+00:10:34,721 --> 00:10:38,084
+The appearance changes; your research stays in place.
+
+119
+00:10:45,384 --> 00:10:49,659
+Help remains available when you need a reminder of a page or workflow.
+
+120
+00:10:50,134 --> 00:10:55,609
+You have connected YouTube, brought in your channels in the way you prefer,
+and built your own research feed.
+
+121
+00:10:55,609 --> 00:11:01,084
+From there, a few actions take you from a video to a deeper examination of
+its argument.
+
+122
+00:11:01,084 --> 00:11:07,209
+You can question the answer, explore other sources and countries, and keep
+the useful results with your research.
+
+123
+00:11:07,284 --> 00:11:09,634
+Start with one question that matters to you.
+
+124
+00:11:09,634 --> 00:11:14,909
+Source Watch helps you organize the investigation; you remain responsible
+for the judgment.
+
+125
+00:11:15,034 --> 00:11:18,396
+As we said at the beginning, your working library stays with you.
+
+126
+00:11:18,396 --> 00:11:27,409
+Sources, local saves, notes, cached transcripts and saved research are
+stored on your computer, rather than in a separate Source Watch cloud
+account.
+
+127
+00:11:27,484 --> 00:11:34,621
+Connecting Google authorizes access to YouTube; it does not turn that
+workspace into a Source Watch cloud library.
+
+128
+00:11:34,621 --> 00:11:38,921
+The authorization token is also stored locally and should be protected.
+
+129
+00:11:38,984 --> 00:11:41,409
+Local-first is not fully offline.
+
+130
+00:11:41,409 --> 00:11:44,884
+YouTube supplies remote material and account services.
+
+131
+00:11:44,884 --> 00:11:50,397
+Text you choose to submit to ChatGPT is handled by that service under its
+own settings.
+
+132
+00:11:50,397 --> 00:11:53,597
+Source Watch does not send your transcripts there automatically.
+
+133
+00:11:53,684 --> 00:11:55,946
+Protect your computer and backups.
+
+134
+00:11:55,946 --> 00:12:00,996
+A folder placed in OneDrive or another sync service may be copied by that
+service.
+
+135
+00:12:00,996 --> 00:12:06,434
+Local storage is not, by itself, a promise of encryption or a secure vault.
