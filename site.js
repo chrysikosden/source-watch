@@ -28,7 +28,7 @@
     });
     const external = document.createElement('a');
     external.href = `https://www.youtube.com/watch?v=${videoId}`;
-    external.textContent = 'Open directly on YouTube';
+    external.textContent = document.body.dataset.version === '2' ? 'Watch on YouTube' : 'Open directly on YouTube';
     external.className = 'light-link';
     document.getElementById('video-note').after(external);
   }
