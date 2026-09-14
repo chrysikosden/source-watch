@@ -6,6 +6,14 @@
   <meta name="description" content="Source Watch V4: a local-first YouTube research workspace. Watch the complete guide, follow setup instructions, and check private-beta download availability.">
   <meta name="theme-color" content="#101c2e">
   <title>Source Watch — Watch. Question. Keep the evidence.</title>
+  <script>
+    // The main website link always starts at the introduction. This also avoids
+    // browsers restoring an old section or preserving a copied section anchor.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    addEventListener('DOMContentLoaded', () => scrollTo(0, 0), { once: true });
+    addEventListener('pageshow', () => scrollTo(0, 0));
+  </script>
   <link rel="stylesheet" href="styles.css">
   <script src="release.js" defer></script>
   <script src="site.js" defer></script>
