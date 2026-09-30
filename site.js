@@ -6,7 +6,7 @@
     if (!videoId) return;
     const frame = document.createElement('iframe');
     frame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&start=${Math.max(0, Math.floor(start))}&rel=0`;
-    frame.title = 'Source Watch V4 — Complete fullscreen guide';
+    frame.title = 'TubeUnpack workflow — recorded with the earlier Source Watch version';
     frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     frame.allowFullscreen = true;
     frame.referrerPolicy = 'strict-origin-when-cross-origin';
@@ -14,7 +14,7 @@
     document.getElementById('video-note').textContent = 'YouTube is now loaded. Choose the player settings for available quality and captions.';
   }
   if (videoId) {
-    document.getElementById('video-status').textContent = 'Source Watch V4 · The complete guide';
+    document.getElementById('video-status').textContent = 'The research workflow · Earlier Source Watch guide';
     const button = document.getElementById('load-video');
     button.hidden = false;
     button.addEventListener('click', () => play());
@@ -38,7 +38,11 @@
   const link = document.getElementById('download-link');
   link.href = download.href;
   link.hidden = false;
+  document.getElementById('download-pending').hidden = true;
+  document.getElementById('release-badge').textContent = 'Available';
   document.getElementById('release-status').textContent = `Windows private-beta build: ${release.version}`;
-  document.getElementById('release-detail').textContent = 'Read the setup instructions and your beta invitation before opening the executable. Review Google permissions before connecting.';
-  document.getElementById('release-meta').textContent = `SHA-256: ${release.sha256}`;
+  document.getElementById('release-detail').textContent = 'Download the Windows installer, then follow the setup guide. Private-beta Google access requires an eligible invited account.';
+  document.getElementById('release-meta').textContent = `${release.version}${Number.isSafeInteger(release.bytes) && release.bytes > 0 ? ' · ' + (release.bytes / 1048576).toFixed(1) + ' MB' : ''} · Windows 10 / 11 · 64-bit`;
+  document.getElementById('release-checksum').textContent = release.sha256;
+  document.getElementById('release-verification').hidden = false;
 })();

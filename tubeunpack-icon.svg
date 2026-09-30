@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="885.392305" viewBox="0 0 566.929 490.19" preserveAspectRatio="xMidYMid meet" role="img" aria-label="TubeUnpack icon color">
+<title>TubeUnpack icon color</title>
+<desc>Icon geometry retained from the approved PDF-derived master. Letter outlines reconstructed from the supplied reference. No live font, bitmap or external asset dependency.</desc>
+<g id="approved-icon"><defs xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 26 22 L 426 22 L 426 466 L 26 466 Z M 26 22 "/>
+</clipPath>
+<clipPath id="clip-1">
+<path clip-rule="evenodd" d="M 26.042969 155.25 C 26.039062 125.1875 40.335938 108.058594 72.078125 100.089844 L 376.304688 23.742188 C 397.320312 18.46875 424.871094 40.523438 424.878906 62.628906 L 425.015625 422.824219 C 425.023438 444.554688 397.878906 469.441406 378.886719 465.117188 L 64.359375 393.492188 C 41.949219 388.386719 26.082031 369.109375 26.078125 346.988281 Z M 26.042969 155.25 "/>
+</clipPath>
+<linearGradient id="linear-pattern-0" gradientUnits="userSpaceOnUse" x1="316.026708" y1="29.363782" x2="43.34497" y2="300.178593" gradientTransform="matrix(1.56352, 0, 0, 1.56352, -49.600435, -7.817584)">
+<stop offset="0" stop-color="rgb(7.240295%, 13.665771%, 20.774841%)" stop-opacity="1"/>
+<stop offset="0.471128" stop-color="rgb(7.305908%, 13.697815%, 20.811462%)" stop-opacity="1"/>
+<stop offset="0.5" stop-color="rgb(7.373047%, 13.729858%, 20.848083%)" stop-opacity="1"/>
+<stop offset="0.528872" stop-color="rgb(7.426453%, 13.755798%, 20.877075%)" stop-opacity="1"/>
+<stop offset="1" stop-color="rgb(7.479858%, 13.783264%, 20.907593%)" stop-opacity="1"/>
+</linearGradient>
+<clipPath id="clip-2">
+<path clip-rule="nonzero" d="M 447 84 L 540 84 L 540 411 L 447 411 Z M 447 84 "/>
+</clipPath>
+<clipPath id="clip-3">
+<path clip-rule="evenodd" d="M 447.539062 84.847656 L 505.816406 103.6875 C 528.25 110.941406 539.9375 128.78125 539.90625 155.730469 L 539.699219 343.21875 C 539.667969 369.152344 528.042969 385.792969 504.96875 392.921875 L 447.496094 410.679688 Z M 447.539062 84.847656 "/>
+</clipPath>
+<linearGradient id="linear-pattern-1" gradientUnits="userSpaceOnUse" x1="379.808992" y1="162.841388" x2="315.195353" y2="164.557129" gradientTransform="matrix(1.56352, 0, 0, 1.56352, -49.600435, -7.817584)">
+<stop offset="0" stop-color="rgb(53.833008%, 92.976379%, 79.049683%)" stop-opacity="1"/>
+<stop offset="0.0855825" stop-color="rgb(53.9505%, 92.988586%, 79.098511%)" stop-opacity="1"/>
+<stop offset="0.25" stop-color="rgb(54.067993%, 93.002319%, 79.148865%)" stop-opacity="1"/>
+<stop offset="0.375" stop-color="rgb(54.187012%, 93.014526%, 79.199219%)" stop-opacity="1"/>
+<stop offset="0.5" stop-color="rgb(54.425049%, 93.041992%, 79.299927%)" stop-opacity="1"/>
+<stop offset="0.625" stop-color="rgb(54.663086%, 93.067932%, 79.400635%)" stop-opacity="1"/>
+<stop offset="0.75" stop-color="rgb(54.901123%, 93.095398%, 79.499817%)" stop-opacity="1"/>
+<stop offset="0.914417" stop-color="rgb(55.149841%, 93.122864%, 79.605103%)" stop-opacity="1"/>
+<stop offset="1" stop-color="rgb(55.279541%, 93.138123%, 79.660034%)" stop-opacity="1"/>
+</linearGradient>
+</defs>
+<g xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" clip-path="url(#clip-0)">
+<g clip-path="url(#clip-1)">
+<path fill-rule="nonzero" fill="url(#linear-pattern-0)" d="M 26.039062 18.46875 L 26.039062 469.441406 L 425.023438 469.441406 L 425.023438 18.46875 Z M 26.039062 18.46875 "/>
+</g>
+</g>
+<g xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" clip-path="url(#clip-2)">
+<g clip-path="url(#clip-3)">
+<path fill-rule="nonzero" fill="url(#linear-pattern-1)" d="M 447.496094 84.847656 L 447.496094 410.679688 L 539.9375 410.679688 L 539.9375 84.847656 Z M 447.496094 84.847656 "/>
+</g>
+</g>
+<path xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill-rule="evenodd" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 221.320312 184.179688 C 221.308594 174.148438 233.65625 165.878906 241.222656 170.847656 L 339.890625 235.671875 C 351.5625 243.339844 351.3125 261.65625 339.429688 269.191406 L 241.199219 331.472656 C 234.269531 335.867188 221.445312 328.542969 221.4375 320.183594 Z M 221.320312 184.179688 "/>
+</g>
+</svg>

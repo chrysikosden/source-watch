@@ -1,91 +1,66 @@
-# Source Watch V4 — Getting started
+# TubeUnpack — Getting started
 
-Private-beta guide · Windows preview
+TubeUnpack is a Windows research workspace for YouTube. The next installer is being prepared. Invited testers should use the build and Google connection instructions provided with their invitation. The website describes current development; earlier beta builds may not contain every feature.
 
-Source Watch is a local-first YouTube research workspace. It helps you monitor sources, prepare transcripts and critical-analysis prompts, explore other perspectives, and keep your findings. AI output and source scores do not establish truth.
+## Install and connect
 
-## Before you start
+1. Open the supplied Windows installer and follow the instructions.
+2. Launch TubeUnpack. Its dashboard opens in your browser; the welcome guide appears on a fresh profile.
+3. Choose Start setup, then Connect YouTube. Sign in on Google's own page with the account containing your subscriptions.
+4. Review the app name and permissions. The connected beta requests viewing and management access to YouTube. Google may show permission checkboxes or an existing-access summary.
+5. Return to TubeUnpack and verify the account. Import all subscriptions or select individual channels. Review suggested categories or create your own.
 
-Use the executable and connection instructions supplied with your beta invitation. The general-beta download is not available yet. The filmed portable preview is not a release installer.
+The current candidate is unsigned, and Google's private-beta account eligibility restrictions still apply. If a Windows or Google warning is unfamiliar, verify the build and access with your organizer.
 
-You need a working Google/YouTube connection setup supplied for your beta, and an internet connection for remote content and account services. A clean executable alone does not configure a Google OAuth application. Ask the organizer if you cannot connect. Do not send them your password or authorization token.
+## Follow your chosen sources
 
-## 1. Open Source Watch
+Group channels into categories, set personal priorities and filter by category, channel, status or search. Save a feed view to return to the same filters. For example, group ten finance channels under Finance and save an unwatched Finance view.
 
-Save the supplied executable, open it, and follow its instructions. The dashboard opens in your browser. On a fresh profile, a welcome guide opens automatically.
+Personal priority is your preference, not a credibility rating. Removing a monitored channel locally is separate from unsubscribing on YouTube.
 
-Use only the expected build. If Windows warns about it, check the version and publisher information with the organizer; do not disable Windows protection.
+## Watch and investigate
 
-## 2. Connect YouTube first
+Play a video inside TubeUnpack. Read its description or available transcript alongside playback. Click available timestamps to seek, enable transcript following, adjust the side panel or switch to theater layout. Open on YouTube if embedded playback is unavailable.
 
-1. Choose **Start setup**, then **Connect YouTube**.
-2. Google's page opens. Sign in there; you do not enter your Google password into Source Watch.
-3. Choose the account containing the subscriptions you want. If Google offers a personal or brand identity, choose the relevant one.
-4. A private test build may show an unverified-app notice. Continue only when you are an invited tester using the expected application and understand the access requested. Otherwise take the safe exit and ask the organizer.
-5. Review the app name and all permissions. The current connection includes account identity information and YouTube viewing **and management** access. It is not read-only. Management access enables supported actions such as playlist updates or unsubscribing when explicitly requested.
-6. On a first connection, Google may show permission checkboxes. Review and select the permissions needed for the workflow, then choose **Continue**. An already connected account may instead show an existing-access summary. Open the service details, review them, choose **Done** if offered, then **Continue**.
-7. Return to Source Watch, verify the connected account, and let subscriptions load.
+Captions and timestamps are not guaranteed. Caption-language options and manual transcript entry are available. Quick Brief is extracted from available transcript text or metadata; it is not an AI truth verdict.
 
-Google grants a broad capability. Source Watch's confirmation controls govern when the application uses it. The tutorial demonstrates a previously authorized account, so its screens are not a promise that every first-time user will see exactly the same panels.
+## Prepare your analysis
 
-## 3. Import your monitored sources
+1. Choose Send to Analysis Desk.
+2. Use Copy Deep + Transcript, or the separate prompt and transcript actions.
+3. Open your preferred assistant. ChatGPT is the default; Setup & Preferences also offers Gemini, Claude, Perplexity and Grok.
+4. Paste, review and submit the material yourself. Opening an assistant does not automatically send text or start analysis.
+5. Ask follow-up questions, inspect evidence and independently verify important claims.
+6. Copy useful output back into Save analysis result.
 
-Choose which subscribed channels become Source Watch sources. Use proposed categories or choose and organize channels yourself. Assign categories before confirming import.
+AI services use your own account and their own policies. TubeUnpack does not automatically retrieve your conversations.
 
-For a large subscription library, work through the pages. **Select visible** selects eligible channels on the current page, not every subscription across all pages. Repeat if you want the whole library. You can refine your categories later.
+## Keep and rediscover your work
 
-## 4. Browse and inspect
+Save video references into local folders, organize multiple selections and drag references between folders. Local saves do not download video files and do not automatically edit YouTube playlists.
 
-Refresh your feed. Browse Latest Long-form or Shorts, and filter by category, channel, status or search. Open **Quick Brief** to inspect extractive points from the available material. Check its basis: a transcript provides more context than a title and description alone. It is not a generative AI verdict.
+Save investigations as named workspaces in Saved research. Include questions, conclusions and verification sources. Search My Research searches saved transcripts, notes and results. Export research as Markdown.
 
-## 5. Prepare and run the analysis
+## Explore
 
-1. Open a video and choose **Send to Analysis Desk**.
-2. Choose **Copy Deep + Transcript**. Review the text and tailor the research question. The packet asks for critical examination of the argument, evidence and claims needing verification.
-3. Use caption-language selection or manual transcript entry if the available transcript is unsuitable.
-4. Click **Open ChatGPT**. The ChatGPT website opens in your browser, using your signed-in account if one is available there.
-5. Paste the packet, review it and send it yourself. Source Watch does not automatically submit it.
-6. Question the response, ask for counterarguments and independently check important claims and citations.
+Use Discovery for more evidence, a challenge to an argument or another source. Trending and Explore by Country offer regional and category filters; these results are signals, not a representative survey.
 
-## 6. Save and organize
+Use My Channels to organize monitored channels and preview recent uploads. Channel Videos lets you browse indexed history, load older videos or explicitly request full-history indexing. Coverage depends on what has been indexed.
 
-Use **Save** for a local video bookmark. To group videos, tick each video's selection box, check the selected count, then open **Selected Videos** and choose a folder or batch action.
+## Back up your workspace
 
-Local saves and folders are separate from YouTube playlist changes. Inspect the destination and confirmation before any YouTube account action.
+In Backup & restore, export your setup or complete workspace, with optional cached transcripts and feed. Password encryption is on by default for exported backups. Retain the password: there is no recovery service.
 
-## 7. Keep your research
+You can separately connect your Google Drive and request an upload or enable daily backups while the app is open. Encrypted automatic backups need the password in the open tab. Drive backup is not continuous synchronization between computers.
 
-Copy useful ChatGPT output back into **Save analysis result** manually. Add verification sources and dates. Save a named workspace in **Saved research**. Reopen it later, export as Markdown, or use **Search My Research** to find transcripts, notes and results.
+On another computer, install TubeUnpack and connect the intended YouTube account before restoring. Review the backup and choose merge or replacement. Google credentials are not transferred. Working files and pre-restore safety copies remain unencrypted.
 
-Source Watch does not automatically retrieve your ChatGPT conversations.
+## Existing video guide
 
-## 8. Discover more perspectives
+https://youtu.be/XTjGIUCzwlI
 
-- **Discovery:** More evidence, Challenge this or Better source; choose monitored feed, monitored history or wider YouTube as appropriate.
-- **Trending:** choose a country and YouTube category to inspect current most-popular results.
-- **Explore by Country:** use country, topic, language, recency and depth to explore additional perspectives. These are search/popularity signals, not a representative measure of a population's priorities.
-- **Channel View:** choose a monitored channel, scroll its indexed videos, and run **Search channel videos**. Check archive coverage: a partial index is not complete channel history.
-
-## 9. Make it comfortable
-
-Choose a light or dark theme. Your research stays in place. Help explains the available workflows.
+This guide was recorded with the earlier Source Watch version. It illustrates the core workflow but predates the TubeUnpack branding, current player and newer features. No new video accompanies this website update.
 
 ## Feedback
 
-Reply through the channel used for your beta invitation. Include:
-
-- Build/version and Windows version.
-- Page and exact steps.
-- Expected result and actual result.
-- Whether the problem repeats.
-- A screenshot only if useful, with private details removed.
-
-Never include passwords, OAuth tokens, private account configuration or your complete local profile. There is no automatic feedback submission in this website.
-
-## Privacy
-
-Sources, local saves, notes, cached transcripts, saved research and authorization tokens are stored on your computer instead of a separate Source Watch cloud account.
-
-Local-first does not mean fully offline. Google/YouTube handle authorization, remote content and account services. Text you choose to submit to ChatGPT is handled under that service's settings. Source Watch does not submit your transcripts there automatically.
-
-Protect your computer, profile and backups. OneDrive or other sync services can copy local folders. Local storage is not itself a guarantee of encryption or a secure vault.
+Contact the person who invited you with the app version, the screen/action, expected result and actual result. Remove account details from screenshots. Do not send passwords, authorization tokens or your complete local data folder.
