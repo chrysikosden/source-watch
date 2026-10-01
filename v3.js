@@ -10,17 +10,35 @@ const organizeScenes=[
  [4950,'07-money-matches','My Channels','Search “money”','Three matches. Find Money & Macro.'],
  [6650,'08-money-finance','My Channels','Money & Macro','Finance added.',.16465,.38963],
  [8100,'09-channel-videos','Channel Videos','Browse your monitored channels','Channel Videos keeps your channels together.'],
- [9500,'10-longform-all','Latest Long-form','Open Latest Long-form','Now bring their latest videos together.'],
- [10800,'11-finance-results','Latest Long-form · Finance','Choose Finance','All Finance channels. One feed.',.215,.198]
+ [9500,'15-longform-all','Latest Long-form','Open Latest Long-form','Now bring their latest videos together.'],
+ [10350,'13-category-menu','Latest Long-form','Choose a category','All your categories, including Finance.'],
+ [11820,'14-finance-selected','Latest Long-form · Finance','Choose Finance','All Finance channels. One feed.']
 ];
 // Exactly two restrained zooms: first channel assignment, then the Finance filter.
 // All intervening searches and navigation stay in a locked 16:9 full-page view.
 const organizeCamera=[
  [0,1,.5,.5],[600,1,.5,.5],[1350,1.45,.41,.32],
  [2700,1.45,.41,.32],[3250,1,.5,.5],
- [9600,1,.5,.5],[10400,1.45,.35,.25],[11400,1.45,.35,.25],
- [12200,1,.5,.5],[15000,1,.5,.5]
+ [9600,1,.5,.5],[10400,1.45,.35,.25],[12000,1.45,.35,.25],
+ [12800,1,.5,.5],[15000,1,.5,.5]
 ];
+// Cursor visits actual capture coordinates; it travels before each click, then settles.
+const organizeActions=[
+ [750,.45,.039],[2450,.16465,.38963],[3250,.45,.039],
+ [4200,.16465,.38963],[4950,.45,.039],[6650,.16465,.38963],
+ [8040,.056,.694],[9450,.0568,.1484],[10350,.22,.1987],[11700,.20,.277]
+];
+function organizePointer(time){
+ let previous=[0,.60,.17];
+ for(const next of organizeActions){
+  if(time<next[0]){
+   const p=Math.max(0,Math.min(1,(time-(next[0]-450))/450)),e=p*p*(3-2*p);
+   return {x:previous[1]+(next[1]-previous[1])*e,y:previous[2]+(next[2]-previous[2])*e,click:previous[0],opacity:Math.min(1,time/200)};
+  }
+  previous=next;
+ }
+ return {x:previous[1],y:previous[2],click:previous[0],opacity:Math.max(0,1-(time-12200)/200)};
+}
 function organizeState(time){
  time=Math.max(0,Math.min(time,14999));
  const scene=organizeScenes.findLast(s=>s[0]<=time);
@@ -28,7 +46,7 @@ function organizeState(time){
  const p=a===b?0:Math.min(1,(time-a[0])/(b[0]-a[0])),e=p*p*(3-2*p);
  return {scene,camera:a.slice(1).map((v,i)=>v+(b[i+1]-v)*e),time};
 }
-if(typeof module!=='undefined')module.exports={organizeScenes,organizeCamera,organizeState};
+if(typeof module!=='undefined')module.exports={organizeScenes,organizeCamera,organizeState,organizeActions,organizePointer};
 if(typeof document!=='undefined'){
  const menu=document.querySelector('.version-switcher');
  document.addEventListener('click',e=>{if(menu&&!menu.contains(e.target))menu.open=false;});
@@ -51,11 +69,14 @@ if(typeof document!=='undefined'){
    step.textContent=s[2];
   }
   wrap.style.transform=`translate(${tx*100}%,${ty*100}%) scale(${scale})`;
-  const age=time-s[0],click=s[5]!==undefined;
-  pointer.hidden=!click||age>850;pulse.hidden=!click||age>550;
-  if(click)for(const el of [pointer,pulse]){el.style.left=(tx+scale*s[5])*100+'%';el.style.top=(ty+scale*s[6]*yFactor)*100+'%';}
-  pulse.style.opacity=click?String(Math.max(0,1-age/550)):'0';
-  pulse.style.transform=`translate(-50%,-50%) scale(${.6+Math.min(age/550,1)*1.3})`;
+  const cursor=organizePointer(time),age=time-cursor.click;
+  pointer.hidden=cursor.opacity<=0;pointer.style.opacity=String(cursor.opacity);
+  pointer.style.left=(tx+scale*cursor.x)*100+'%';pointer.style.top=(ty+scale*cursor.y)*100+'%';
+  const action=organizeActions.find(a=>a[0]===cursor.click);
+  pulse.hidden=!action||age>240;
+  if(action){pulse.style.left=(tx+scale*action[1])*100+'%';pulse.style.top=(ty+scale*action[2])*100+'%';}
+  pulse.style.opacity=String(Math.max(0,.7*(1-age/240)));
+  pulse.style.transform=`translate(-50%,-50%) scale(${.65+Math.min(age/240,1)*.65})`;
   progress.style.width=(time/150)+'%';
  }
  function label(){toggle.textContent=paused?'Play':'Pause';toggle.setAttribute('aria-label',(paused?'Play':'Pause')+' organization animation');}
