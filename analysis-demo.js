@@ -1,21 +1,24 @@
 'use strict';
-// Genuine captured states. The prepared material is not submitted to ChatGPT.
-const analysisScenes=[[0,'00-desk'],[2050,'01-copied'],[4100,'02-chatgpt'],[5600,'03-pasted']];
-const analysisActions=[[1950,.4647,.3765],[3900,.5309,.3765],[5450,.505,.51]];
+// Genuine app/ChatGPT captured states. Generation waiting time is shortened.
+const analysisScenes=[[0,'10-feed'],[600,'11-selected'],[1600,'13-desk'],
+ [3300,'14-copied'],[4300,'18-chatgpt'],[5100,'15-pasted'],
+ [7200,'17-response']];
+const analysisActions=[[520,.14052,.42833],[1450,.367547,.355556],
+ [3180,.4647,.3765],[4150,.5308,.3765],[4950,.505,.51],[5800,.599,.558]];
 function analysisState(time){
  time=Math.max(0,Math.min(9999,time));
  const scene=analysisScenes.findLast(s=>s[0]<=time);
  let scale=1,cx=.5,cy=.5;
  const smooth=p=>{p=Math.max(0,Math.min(1,p));return p*p*(3-2*p)};
- if(time<4100){const z=time<2800?smooth((time-550)/650):1-smooth((time-2800)/650);scale=1+.8*z;cx=.5;cy=.5-.12*z;}
- else{scale=3.2;cx=.505;cy=.51;}
- let prior=[0,.37,.47],cursor;
+ if(time<4300){const z=smooth((time-2150)/600);scale=1+.8*z;cx=.5;cy=.5-.12*z;}
+ else{scale=3.2;cx=.505;cy=time<7200?.51:.37;}
+ let prior=[0,.10,.55],cursor;
  for(const next of analysisActions){
   if(time<next[0]){const p=smooth((time-(next[0]-400))/400);cursor={x:prior[1]+(next[1]-prior[1])*p,y:prior[2]+(next[2]-prior[2])*p,click:prior[0]};break;}prior=next;
  }
  cursor||={x:prior[1],y:prior[2],click:prior[0]};
- if(time>=4100){const p=smooth((time-4650)/800);cursor.x=.40+(.505-.40)*p;cursor.y=.42+(.51-.42)*p;}
- cursor.opacity=Math.max(0,Math.min(1,time/150,(5850-time)/200));
+ if(time>=4300&&time<4950){const p=smooth((time-4500)/450);cursor.x=.40+(.505-.40)*p;cursor.y=.42+(.51-.42)*p;}
+ cursor.opacity=Math.max(0,Math.min(1,time/150,(6200-time)/200));
  return{scene,camera:[scale,cx,cy],cursor,time};
 }
 if(typeof module!=='undefined')module.exports={analysisScenes,analysisActions,analysisState};
