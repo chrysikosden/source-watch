@@ -9,8 +9,7 @@ const organizeScenes=[
  [4200,'06-patrick-finance','My Channels','Patrick Boyle','Finance added.',.16465,.38963],
  [4950,'07-money-matches','My Channels','Search “money”','Three matches. Find Money & Macro.'],
  [6650,'08-money-finance','My Channels','Money & Macro','Finance added.',.16465,.38963],
- [8100,'09-channel-videos','Channel Videos','Browse your monitored channels','Channel Videos keeps your channels together.'],
- [9500,'15-longform-all','Latest Long-form','Open Latest Long-form','Now bring their latest videos together.'],
+ [8100,'15-longform-all','Latest Long-form','Open Latest Long-form','Now bring their latest videos together.'],
  [10350,'13-category-menu','Latest Long-form','Choose a category','All your categories, including Finance.'],
  [11820,'14-finance-selected','Latest Long-form · Finance','Choose Finance','All Finance channels. One feed.']
 ];
@@ -24,15 +23,16 @@ const organizeCamera=[
 ];
 // Cursor visits actual capture coordinates; it travels before each click, then settles.
 const organizeActions=[
- [750,.45,.039],[2450,.16465,.38963],[3250,.45,.039],
+ [300,.056,.624],[750,.45,.039],[2450,.16465,.38963],[3250,.45,.039],
  [4200,.16465,.38963],[4950,.45,.039],[6650,.16465,.38963],
- [8040,.056,.694],[9450,.0568,.1484],[10350,.22,.1987],[11700,.20,.277]
+ [8040,.0568,.1484],[10350,.22,.1987],[11700,.20,.277]
 ];
 function organizePointer(time){
- let previous=[0,.60,.17];
+ let previous=[0,.115,.65];
  for(const next of organizeActions){
   if(time<next[0]){
-   const p=Math.max(0,Math.min(1,(time-(next[0]-450))/450)),e=p*p*(3-2*p);
+   const start=Math.max(previous[0],next[0]-450);
+   const p=Math.max(0,Math.min(1,(time-start)/(next[0]-start))),e=p*p*(3-2*p);
    return {x:previous[1]+(next[1]-previous[1])*e,y:previous[2]+(next[2]-previous[2])*e,click:previous[0],opacity:Math.min(1,time/200)};
   }
   previous=next;
