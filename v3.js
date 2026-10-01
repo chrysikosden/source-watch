@@ -11,19 +11,15 @@ const organizeScenes=[
  [6650,'08-money-finance','My Channels','Money & Macro','Finance added.',.16465,.38963],
  [8100,'09-channel-videos','Channel Videos','Browse your monitored channels','Channel Videos keeps your channels together.'],
  [9500,'10-longform-all','Latest Long-form','Open Latest Long-form','Now bring their latest videos together.'],
- [10800,'11-finance-results','Latest Long-form · Finance','Choose Finance','All Finance channels. One feed.',.215,.198],
- [12100,'12-finance-two-rows','Latest Long-form · Finance','Your channels. One Finance feed.','Organize once. Come back whenever you need.']
+ [10800,'11-finance-results','Latest Long-form · Finance','Choose Finance','All Finance channels. One feed.',.215,.198]
 ];
-// Full page → search → category → full page before every navigation change.
+// Exactly two restrained zooms: first channel assignment, then the Finance filter.
+// All intervening searches and navigation stay in a locked 16:9 full-page view.
 const organizeCamera=[
- [0,1,.5,.5],[500,1,.5,.5],[1200,1.8,.52,.22],[1600,1.8,.52,.22],
- [2200,1.8,.36,.33],[2850,1.8,.36,.33],[3150,1.35,.47,.3],
- [3650,1.8,.52,.22],[4150,1.8,.36,.33],[4600,1.8,.36,.33],
- [5000,1.5,.50,.28],[5550,1.7,.53,.22],[6050,1.7,.53,.22],
- [6650,1.8,.36,.34],[7100,1.8,.36,.34],[8000,1,.5,.5],
- [8100,1,.5,.5],[8900,1.08,.48,.48],[9400,1,.5,.5],
- [9500,1,.5,.5],[10200,1.65,.35,.25],[11300,1.65,.35,.25],
- [12000,1,.5,.5],[12100,1,.5,.318],[12900,.70,.5,.5],[14700,.70,.5,.5],[15000,.70,.5,.5]
+ [0,1,.5,.5],[600,1,.5,.5],[1350,1.45,.41,.32],
+ [2700,1.45,.41,.32],[3250,1,.5,.5],
+ [9600,1,.5,.5],[10400,1.45,.35,.25],[11400,1.45,.35,.25],
+ [12200,1,.5,.5],[15000,1,.5,.5]
 ];
 function organizeState(time){
  time=Math.max(0,Math.min(time,14999));
@@ -41,25 +37,22 @@ if(typeof document!=='undefined'){
  const root=document.querySelector('.organize-demo');if(!root)return;
  const picture=root.querySelector('.demo-image'),wrap=root.querySelector('.demo-image-wrap');
  const pointer=root.querySelector('.demo-pointer'),pulse=root.querySelector('.demo-click');
- const title=root.querySelector('.demo-caption strong'),subtitle=root.querySelector('.demo-caption span');
  const step=root.querySelector('.demo-step'),progress=root.querySelector('.demo-progress span');
  const toggle=root.querySelector('.demo-toggle'),replay=root.querySelector('.demo-replay');
  const durations=root.querySelectorAll('[data-duration]'),motion=matchMedia('(prefers-reduced-motion: reduce)');
- let duration=15000,elapsed=0,previous=null,raf=0,current='',visible=false,ready=false,loading=false,paused=motion.matches;
+ let duration=10000,elapsed=0,previous=null,raf=0,current='',visible=false,ready=false,loading=false,paused=motion.matches;
  function render(time){
-  const {scene:s,camera:[scale,cx,cy]}=organizeState(time),tall=s[1]==='12-finance-two-rows';
-  const ratio=tall?3840/3400:3840/2160,yFactor=1.6/ratio;
+  const {scene:s,camera:[scale,cx,cy]}=organizeState(time);
+  const yFactor=1; // All displayed captures and the viewport share 16:9 geometry.
   const tx=scale>1?Math.max(1-scale,Math.min(0,.5-scale*cx)):(1-scale)/2;
   const ty=scale*yFactor>1?Math.max(1-scale*yFactor,Math.min(0,.5-scale*cy*yFactor)):(1-scale*yFactor)/2;
   if(current!==s[1]){
-   const changedPage=current&&step.textContent!==s[2];current=s[1];
-   picture.src='organize4k/'+s[1]+'.jpg';picture.height=tall?3400:2160;
-   title.textContent=s[3];subtitle.textContent=s[4];step.textContent=s[2];
-   if(changedPage&&!motion.matches)picture.animate([{opacity:.45,filter:'blur(2px)'},{opacity:1,filter:'blur(0)'}],{duration:180});
+   current=s[1];picture.src='organize4k/'+s[1]+'.jpg';picture.height=2160;
+   step.textContent=s[2];
   }
   wrap.style.transform=`translate(${tx*100}%,${ty*100}%) scale(${scale})`;
   const age=time-s[0],click=s[5]!==undefined;
-  pointer.hidden=!click;pulse.hidden=!click;
+  pointer.hidden=!click||age>850;pulse.hidden=!click||age>550;
   if(click)for(const el of [pointer,pulse]){el.style.left=(tx+scale*s[5])*100+'%';el.style.top=(ty+scale*s[6]*yFactor)*100+'%';}
   pulse.style.opacity=click?String(Math.max(0,1-age/550)):'0';
   pulse.style.transform=`translate(-50%,-50%) scale(${.6+Math.min(age/550,1)*1.3})`;
