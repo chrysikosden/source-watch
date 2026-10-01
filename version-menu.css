@@ -1,0 +1,9 @@
+.version-switcher .version-short{display:none}
+.version-switcher .version-menu{min-width:180px;z-index:10}
+.version-switcher .version-menu a{display:block;white-space:nowrap;border-radius:3px}
+.version-switcher .version-menu a:hover{background:#f0f7f3}
+.version-switcher .version-menu a[aria-current="page"]{background:#e9f5f0;color:#176448;font-weight:750}
+@media(max-width:600px){
+ .version-switcher .version-wide{display:none}
+ .version-switcher .version-short{display:inline}
+}
