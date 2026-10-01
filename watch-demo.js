@@ -1,12 +1,12 @@
 'use strict';
 // Actual 3840x2160 app captures; source video 9S7wwmJtuac, Money & Macro.
 // The embedded video was muted and timestamp seeking verified in the real UI.
-const watchScenes = [[0,'00-feed'],[800,'01-open'],[1500,'02-player'],
- [2300,'02-playback'],[3300,'03-transcript'],[5800,'04-seek']];
-const watchActions = [[730,.202,.584],[1420,.755,.1406],
- [2220,.3337,.5124],[3220,.7324,.2831],[5700,.6761,.5946]];
-const watchCamera = [[0,1,.5,.5],[4000,1,.5,.5],[4600,1.35,.63,.50],
- [6300,1.35,.63,.50],[7100,1,.5,.5],[10000,1,.5,.5]];
+const watchScenes = [[0,'00-feed'],[800,'01-open'],[2700,'02-player'],
+ [3500,'02-playback'],[4400,'03-transcript'],[5400,'04-transcript-scroll'],[6600,'05-seek-chart']];
+const watchActions = [[730,.202,.584],[2500,.755,.1406],
+ [3420,.3337,.5124],[4320,.7324,.2831],[6500,.6761,.5754]];
+const watchCamera = [[0,1,.5,.5],[5200,1,.5,.5],[5800,1.35,.63,.50],
+ [7000,1.35,.63,.50],[7700,1,.5,.5],[10000,1,.5,.5]];
 function watchState(time){
  time=Math.max(0,Math.min(9999,time));
  const scene=watchScenes.findLast(s=>s[0]<=time);
@@ -16,12 +16,14 @@ function watchState(time){
  let prior=[0,.14,.64],cursor;
  for(const next of watchActions){
   if(time<next[0]){
-   const start=Math.max(prior[0],next[0]-350),p=Math.max(0,(time-start)/(next[0]-start)),e=p*p*(3-2*p);
+   // Arrive early and hold over Expand; travel through the transcript before seeking.
+   const end=next[0]===2500?1800:next[0]===6500?6100:next[0];
+   const start=Math.max(prior[0],next[0]===6500?5000:end-350),p=Math.max(0,Math.min(1,(time-start)/(end-start))),e=p*p*(3-2*p);
    cursor={x:prior[1]+(next[1]-prior[1])*e,y:prior[2]+(next[2]-prior[2])*e,click:prior[0]};break;
   }prior=next;
  }
  cursor ||= {x:prior[1],y:prior[2],click:prior[0]};
- cursor.opacity=Math.max(0,Math.min(1,time/150,(6000-time)/200));
+ cursor.opacity=Math.max(0,Math.min(1,time/150,(6800-time)/200));
  return {scene,camera,cursor,time};
 }
 if(typeof module!=='undefined')module.exports={watchScenes,watchActions,watchCamera,watchState};
