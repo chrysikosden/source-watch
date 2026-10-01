@@ -1,0 +1,19 @@
+/* Real app captures, displayed with a smooth editorial camera. */
+.organize-demo .demo-heading{padding:11px 16px}
+.demo-durations{display:flex;gap:3px;padding:3px;background:#0d1411;border:1px solid #344a3e;border-radius:7px}
+.demo-durations button{font:inherit;font-size:.72rem;padding:5px 10px;border:0;border-radius:4px;color:#afc7bb;background:transparent;cursor:pointer}
+.demo-durations button[aria-pressed=true]{background:#9ae7c5;color:#113e2b;font-weight:750}
+.demo-durations button:focus-visible{outline:2px solid white;outline-offset:3px}
+.organize-demo .demo-window{height:auto;aspect-ratio:8/5;background:#080c0e;isolation:isolate}
+.organize-demo .demo-image-wrap{inset:0;width:100%;height:100%;transform-origin:0 0;transform:translate(15%,.4%) scale(.7);will-change:transform}
+.stage-panel .organize-demo .demo-image{display:block;width:100%;height:auto;max-height:none;object-fit:initial}
+.organize-demo .demo-step{position:absolute;bottom:9px;left:10px;z-index:3;background:#10291fef;color:#bff8df;border:1px solid #44836a;border-radius:4px;padding:6px 9px;font-size:.66rem;box-shadow:0 3px 12px #0008}
+.organize-demo .demo-pointer{width:20px;height:26px;z-index:2;filter:drop-shadow(0 2px 3px #000b)}
+.organize-demo .demo-pointer svg{width:20px;height:26px}
+.organize-demo .demo-click{width:28px;height:28px;z-index:2}
+.organize-demo .demo-caption{padding:14px 17px;min-height:91px}
+.organize-demo .demo-controls{padding:9px 16px;gap:8px}
+.organize-demo .demo-controls button{padding:5px 10px}
+.stage-panel .organize-demo figcaption{font-size:.63rem;padding:10px 16px}
+@media(max-width:600px){.organize-demo .demo-caption strong{font-size:.88rem}.organize-demo .demo-caption span{font-size:.73rem}.organize-demo .demo-step{font-size:.53rem;padding:4px 6px;bottom:6px;left:6px}.organize-demo .demo-badge{font-size:.58rem}}
+@media(prefers-reduced-motion:reduce){.organize-demo .demo-image-wrap{will-change:auto}}
