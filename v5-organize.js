@@ -43,7 +43,7 @@ function organizeState(time){
  const k=organizeCamera.findLastIndex(k=>k[0]<=time),a=organizeCamera[k],b=organizeCamera[k+1]||a;
  const p=a===b?0:Math.min(1,(time-a[0])/(b[0]-a[0])),e=p*p*(3-2*p);
  const pScroll=Math.max(0,Math.min(1,(time-14800)/3600));
- const scrollY=2520*pScroll*pScroll*(3-2*pScroll);
+ const scrollY=3000*pScroll*pScroll*(3-2*pScroll);
  return {scene,scrollY,camera:a.slice(1).map((v,i)=>v+(b[i+1]-v)*e),time};
 }
 if(typeof module!=='undefined')module.exports={organizeScenes,organizeCamera,organizeState,organizeActions,organizePointer};
