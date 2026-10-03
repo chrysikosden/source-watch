@@ -9,8 +9,8 @@ const organizeScenes=[
  [4200,'06-patrick-finance','My Channels','Patrick Boyle','Finance added.',.16465,.38963],
  [4950,'07-money-matches','My Channels','Search “money”','Three matches. Find Money & Macro.'],
  [6650,'08-money-finance','My Channels','Money & Macro','Finance added.',.16465,.38963],
- [8100,'15-longform-all','Latest Long-form','Open Latest Long-form','Now bring their latest videos together.'],
- [10350,'13-category-menu','Latest Long-form','Choose a category','All your categories, including Finance.'],
+ [8100,'18-longform-mixed','Latest Long-form','Open Latest Long-form','Now bring their latest videos together.'],
+ [10350,'19-category-mixed','Latest Long-form','Choose a category','All your categories, including Finance.'],
  [11820,'14-finance-selected','Latest Long-form · Finance','Choose Finance','All Finance channels. One feed.'],
  [12800,'16-finance-loaded','Latest Long-form · Finance','Finance videos loaded','Videos from your Finance channels, together.'],
  [14800,'17-finance-scroll','Latest Long-form · Finance','Browse the Finance feed','Scroll through more videos from your Finance channels.']
