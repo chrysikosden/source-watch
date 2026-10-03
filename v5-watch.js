@@ -1,9 +1,8 @@
 'use strict';
 // Actual 2560x1440 app captures; source video 9S7wwmJtuac, Money & Macro.
 // The embedded video was muted and timestamp seeking verified in the real UI.
-const watchScenes = [[0,'00-feed'],[800,'01-open'],[2700,'02-player'],
- [3500,'02-playback'],[4400,'03-transcript'],[5400,'04-transcript-scroll'],[6600,'05-seek-chart']];
-const watchActions = [[730,0.2442285299301147,0.5474739498562283],[2500,0.8971191599965096,0.05680555502573649],[3420,0.335,0.535],[4320,0.7422265633940697,0.317569457160102],[6500,0.6793627932667732,0.6160416920979818]];
+const watchScenes = [[0,'00-feed'],[800,'02-player'],[1800,'02-playback'],[2900,'03-transcript'],[5400,'04-transcript-scroll'],[6600,'05-seek-chart']];
+const watchActions = [[730,0.2442285299301147,0.5474739498562283],[1720,0.335,0.535],[2820,0.7422265633940697,0.317569457160102],[6500,0.6793627932667732,0.6160416920979818]];
 const watchCamera = [[0,1,.5,.5],[5200,1,.5,.5],[5800,1.35,.63,.50],
  [7000,1.35,.63,.50],[7700,1,.5,.5],[10000,1,.5,.5]];
 function watchState(time){
@@ -15,8 +14,8 @@ function watchState(time){
  let prior=[0,.14,.64],cursor;
  for(const next of watchActions){
   if(time<next[0]){
-   // Arrive early and hold over Expand; travel through the transcript before seeking.
-   const end=next[0]===2500?1800:next[0]===6500?6100:next[0];
+   // Travel directly to Play and Transcript; settle on the timestamp before seeking.
+   const end=next[0]===6500?6100:next[0];
    const start=Math.max(prior[0],next[0]===6500?5000:end-350),p=Math.max(0,Math.min(1,(time-start)/(end-start))),e=p*p*(3-2*p);
    cursor={x:prior[1]+(next[1]-prior[1])*e,y:prior[2]+(next[2]-prior[2])*e,click:prior[0]};break;
   }prior=next;
