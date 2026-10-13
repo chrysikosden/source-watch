@@ -1,0 +1,22 @@
+/* V4: a two-column introduction above every full-width demonstration. */
+body[data-version="4"] .stage-panel{display:flex;flex-direction:column;align-items:stretch;gap:30px;padding:56px 0 64px}
+body[data-version="4"] .stage-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,88px);align-items:start}
+body[data-version="4"] .stage-copy{max-width:none;min-width:0}
+body[data-version="4"] .stage-panel h3{font-size:clamp(1.85rem,2.65vw,2.45rem);margin-bottom:20px}
+body[data-version="4"] .stage-panel .eyebrow{margin-bottom:16px}
+body[data-version="4"] .stage-detail{min-width:0;padding-top:3px}
+body[data-version="4"] .stage-detail .analysis-flow{list-style:none;counter-reset:feature-step;padding:0;margin:0 0 20px;display:grid;gap:18px}
+body[data-version="4"] .stage-detail .analysis-flow li{counter-increment:feature-step;position:relative;padding:0 0 0 38px;font-size:.96rem;line-height:1.6}
+body[data-version="4"] .stage-detail .analysis-flow li:before{content:counter(feature-step);position:absolute;left:0;top:2px;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:#e6f4ed;color:#176448;font-size:.75rem;font-weight:750}
+body[data-version="4"] .stage-detail .analysis-flow li>strong:first-child{display:block;margin-bottom:3px}
+body[data-version="4"] .stage-detail>p{font-size:.9rem}
+body[data-version="4"] .stage-detail>p.fine{font-size:.8rem;line-height:1.6}
+body[data-version="4"] .stage-copy>:last-child,body[data-version="4"] .stage-detail>:last-child{margin-bottom:0}
+body[data-version="4"] .stage-panel>figure{order:0;width:100%;max-width:none;box-shadow:0 22px 55px #101c2e17}
+body[data-version="4"] .stage-panel .demo-window{height:auto;aspect-ratio:16/9}
+@media(max-width:760px){
+ body[data-version="4"] .stage-intro{grid-template-columns:1fr;gap:22px}
+ body[data-version="4"] .stage-panel{gap:24px;padding:36px 0 42px}
+ body[data-version="4"] .stage-detail .analysis-flow{gap:15px}
+ body[data-version="4"] .stage-detail .analysis-flow li{font-size:.93rem}
+}

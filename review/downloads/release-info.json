@@ -1,0 +1,14 @@
+{
+  "version": "4.0.0-beta.13",
+  "candidate": "candidate1",
+  "built": "2026-10-05",
+  "platform": "Windows 10 / 11 · x64",
+  "file": "TubeUnpack-4.0.0-beta.13-windows-x64-setup.exe",
+  "bytes": 24134897,
+  "sha256": "0e2e10b85c9bede2f07bfb01cf2a973a3c231d21e3b3cbc927dedea3f64e5c69",
+  "authenticodeSigned": false,
+  "publicDownloadApproved": false,
+  "distribution": "Website design preview only; installer not hosted",
+  "downloadUrl": null,
+  "installerIncluded": false
+}

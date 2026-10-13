@@ -1,0 +1,47 @@
+[
+  {
+    "version": 1,
+    "url": "v1.html",
+    "label": "Original"
+  },
+  {
+    "version": 2,
+    "url": "v2.html",
+    "label": "Original copy alternative"
+  },
+  {
+    "version": 3,
+    "url": "v3.html",
+    "label": "Workflow beside copy"
+  },
+  {
+    "version": 4,
+    "url": "v4.html",
+    "label": "Larger demonstrations"
+  },
+  {
+    "version": 5,
+    "url": "v5.html",
+    "label": "1440p reference"
+  },
+  {
+    "version": 6,
+    "url": "v6.html",
+    "label": "Refined original"
+  },
+  {
+    "version": 7,
+    "url": "v7.html",
+    "label": "Guided product tour"
+  },
+  {
+    "version": 8,
+    "url": "v8.html",
+    "label": "Question-led research"
+  },
+  {
+    "version": 9,
+    "url": "v9.html",
+    "label": "Focused beta invitation"
+  }
+]
